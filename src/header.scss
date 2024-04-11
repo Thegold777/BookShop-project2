@@ -1,0 +1,71 @@
+//$titleFont:'Montserrat', serif;
+//$titleSize:24px;
+$headerColor:#1C2A39;
+$navItemColor:#5C6A79;
+.header{
+  height: 116px;
+  margin: 0;
+  width: 1920px;
+  position: sticky;
+  background: white;
+  top:0;
+  z-index: 5;
+}
+.header__title{
+  font-family: Montserrat,serif;
+  font-size: 24px;
+  color:$headerColor;
+  margin-left: 166px;
+  margin-top: 47px;
+  font-weight: bold;
+  width: 127px;
+}
+.header__nav{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  margin-top: -34px;
+  justify-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 372px;
+  height: 12px;
+}
+.header__nav_item{
+  color:$navItemColor;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 10px;
+  //cursor:pointer;
+  text-decoration: none;
+}
+.active{
+  color:$headerColor;
+ }
+.header__icons{
+  position: absolute;
+  right: 158px;
+  width: 120px;
+  display: flex;
+  gap:40px;
+  margin-top:-28px;
+}
+.header__icons_user,.header__icons_search,.header__icons_shopBag{
+  cursor: pointer;
+}
+.header__bagItems_count{
+  width: 13px;
+  height: 13px;
+  background: #FF353A;
+  border-radius: 50%;
+  color: white;
+  font-family: Montserrat, serif;
+  font-weight: 500;
+  font-size: 10px;
+  text-align: center;
+  position: absolute;
+  right: 155px;
+  top:17px;
+  display: none;
+}

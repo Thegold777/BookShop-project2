@@ -1,0 +1,114 @@
+.main__slider {
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  justify-items: center;
+  margin-top: 3px;
+  width: 1120px;
+  height: 716px;
+  position: relative;
+  z-index: 0; }
+
+.main__slider_img {
+  width: 1120px;
+  height: 702px;
+  margin-top: 0; }
+
+.main__slider_dots {
+  position: absolute;
+  bottom: 0;
+  left: 523px;
+  height: 10px;
+  width: 64px; }
+
+.main__slider_dots_1 {
+  width: 12px;
+  height: 12px;
+  background: #9E98DC;
+  border-radius: 30px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 2px;
+  transition: background 0.4s ease; }
+
+.main__slider_dots_2 {
+  width: 12px;
+  height: 12px;
+  background: #EFEEF6;
+  border-radius: 30px;
+  cursor: pointer;
+  position: absolute;
+  left: 22px;
+  bottom: 2px;
+  transition: background 0.4s ease; }
+
+.main__slider_dots_3 {
+  width: 12px;
+  height: 12px;
+  background: #EFEEF6;
+  border-radius: 30px;
+  cursor: pointer;
+  position: absolute;
+  left: 44px;
+  bottom: 2px;
+  transition: background 0.4s ease; }
+
+.main__promo_1 {
+  background: #9E98DC;
+  width: 149px;
+  height: 204px;
+  position: absolute;
+  right: 294px;
+  z-index: 1; }
+  @media screen and (max-width: 1440px) {
+    .main__promo_1 {
+      right: 74px; } }
+  @media screen and (max-width: 1024px) {
+    .main__promo_1 {
+      right: -30px; } }
+
+.main__promo_1_text {
+  color: #1C2A39;
+  font-family: Montserrat, serif;
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase;
+  display: flex;
+  flex-wrap: wrap;
+  width: 109px;
+  height: 66px;
+  margin-top: 102px;
+  margin-left: 20px;
+  text-decoration: none; }
+
+.main__promo_1_text_arrow {
+  font-size: 55px;
+  margin-top: -30px; }
+
+.main__promo_2 {
+  background: #FF8FE6;
+  width: 137px;
+  height: 273px;
+  position: absolute;
+  right: 0;
+  top: 478px; }
+
+.main__promo_2_text {
+  text-transform: uppercase;
+  font-family: Montserrat, serif;
+  font-weight: bold;
+  font-size: 18px;
+  width: 69px;
+  height: 88px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 149px;
+  margin-left: 21px;
+  text-decoration: none;
+  color: #1C2A39; }
+
+.main__promo_2_text_arrow {
+  font-size: 55px;
+  margin-top: -30px; }
+
+/*# sourceMappingURL=slider.css.map */

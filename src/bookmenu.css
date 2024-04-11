@@ -1,0 +1,143 @@
+.main__menu {
+  width: 416px;
+  height: 710px;
+  background: #EFEEF6;
+  position: absolute; }
+
+.main__menu_list {
+  top: 45px;
+  position: relative;
+  margin-left: 158px; }
+
+.main__menu_list_item {
+  color: #5C6A79;
+  margin-top: 23px;
+  cursor: pointer;
+  font-family: Montserrat, serif;
+  font-weight: 500;
+  font-size: 12px;
+  list-style-type: none; }
+
+.main__menu_list_item_selected {
+  color: #1C2A39;
+  margin-top: 23px;
+  cursor: pointer;
+  font-family: Montserrat, serif;
+  font-weight: bold;
+  font-size: 16px;
+  list-style-type: none; }
+
+.main__books {
+  width: 924px; }
+
+.main__shelf {
+  width: 924px;
+  display: grid;
+  grid-template-columns: repeat(2, 424px);
+  grid-template-rows: repeat(3, 300px);
+  gap: 76px;
+  margin-left: 356px; }
+
+.main__shelf_book {
+  width: 424px;
+  height: 300px;
+  margin-top: 20px;
+  position: relative; }
+
+.main__shelf_book_img {
+  width: 212px;
+  height: 300px;
+  position: absolute; }
+
+.main__shelf_book_info {
+  width: 176px;
+  height: 203px;
+  position: absolute;
+  margin-top: 48px;
+  margin-left: 248px; }
+
+.main__shelf_book_info_author {
+  font-family: OpenSans, serif;
+  color: #5C6A79;
+  font-size: 10px;
+  font-weight: 400; }
+
+.main__shelf_book_info_name {
+  font-family: Montserrat, serif;
+  font-weight: bold;
+  color: #1C2A39;
+  position: absolute;
+  left: 0;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden; }
+
+.main__shelf_book_button {
+  width: 176px;
+  height: 45px;
+  position: relative;
+  margin-top: 21px;
+  background: white;
+  border: 1px solid #4C3DB2;
+  color: #4C3DB2;
+  font-family: Montserrat, serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer; }
+
+.main__shelf_book_button_active {
+  width: 176px;
+  height: 45px;
+  position: relative;
+  margin-top: 21px;
+  background: white;
+  border: 1px solid #EEEDF5;
+  color: #5C6A79;
+  font-family: Montserrat, serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer; }
+
+.main__shelf_book_info_text {
+  font-family: Open Sans, serif;
+  font-weight: 400;
+  font-size: 10px;
+  margin-top: 34px;
+  color: #5C6A79;
+  width: 176px;
+  height: 42px;
+  -webkit-line-clamp: 3;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden; }
+
+.main__shelf_book_info_price {
+  font-family: Montserrat, serif;
+  font-weight: bold;
+  font-size: 13px;
+  color: #1C2A39; }
+
+.main__shelf_book_info_rating {
+  width: 121px;
+  height: 14px;
+  font-family: Open Sans, serif;
+  font-weight: 400;
+  font-size: 10px;
+  color: #5C6A79; }
+
+.main__load {
+  width: 176px;
+  height: 45px;
+  background: white;
+  border: 1px solid #4C3DB2;
+  color: #4C3DB2;
+  font-family: Montserrat, serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
+  margin-top: 20px;
+  left: 721px; }
+
+/*# sourceMappingURL=bookmenu.css.map */
