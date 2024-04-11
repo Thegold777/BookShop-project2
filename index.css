@@ -2,11 +2,13 @@
 .header {
   height: 116px;
   margin: 0;
-  width: 1920px;
   position: sticky;
   background: white;
   top: 0;
   z-index: 5; }
+  @media screen and (max-width: 1440px) {
+    .header {
+      width: 1440px; } }
 
 .header__title {
   font-family: Montserrat,serif;

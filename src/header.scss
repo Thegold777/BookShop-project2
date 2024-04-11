@@ -5,7 +5,10 @@ $navItemColor:#5C6A79;
 .header{
   height: 116px;
   margin: 0;
-  width: 1920px;
+
+  @media screen and (max-width: 1440px) {
+    width: 1440px;
+  }
   position: sticky;
   background: white;
   top:0;

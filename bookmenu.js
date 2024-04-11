@@ -50,15 +50,9 @@ function selected(){
          document.querySelector('.header__bagItems_count').innerHTML = count
          localStorage.setItem('number',count)
       }
+
    })
-   // if (typeof (count) === "number") {
-   //    count = localStorage.getItem('number')
-   //    count = parseInt(count)
-   // }
-   // else
-   // {
-   //    count = 0;
-   // }
+  
    let loadButton = document.querySelector('.main__load');
    document.querySelector('.main__load').addEventListener('click',() =>{
       start = start + 6;
