@@ -9,6 +9,10 @@ $promoText:#1C2A39;
   justify-items: center;
   margin-top: 3px;
   width: 1120px;
+  @media screen and (max-width: 1024px) {
+    width: 400px;
+    left: -270px;
+  }
   height:716px;
   position: relative;
   z-index: 0;
@@ -67,7 +71,7 @@ $promoText:#1C2A39;
     right: 74px;
   }
   @media screen and (max-width: 1024px) {
-    right: -30px;
+    right: -50px;
   }
   right: 294px;
   z-index: 1;

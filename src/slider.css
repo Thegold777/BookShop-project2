@@ -8,6 +8,10 @@
   height: 716px;
   position: relative;
   z-index: 0; }
+  @media screen and (max-width: 1024px) {
+    .main__slider {
+      width: 400px;
+      left: -270px; } }
 
 .main__slider_img {
   width: 1120px;
@@ -65,7 +69,7 @@
       right: 74px; } }
   @media screen and (max-width: 1024px) {
     .main__promo_1 {
-      right: -30px; } }
+      right: -50px; } }
 
 .main__promo_1_text {
   color: #1C2A39;

@@ -1,7 +1,9 @@
 import './index.scss'
-import './slider.js'
-import './bookmenu'
-import {initSlider} from "./slider.js";
-initSlider()
-import {selected} from "./bookmenu.js";
+import './src/banner/slider.js'
+import './src/banner/bookmenu.js'
+import {initSlider} from "./src/banner/slider.js";
+
+import {selected} from "./src/banner/bookmenu.js";
+
 selected()
+initSlider()

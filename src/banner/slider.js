@@ -54,5 +54,5 @@ function initSlider() {
     }
     setInterval(switchImages,5000 )
 }
-initSlider()
+//initSlider()
 export {initSlider}

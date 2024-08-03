@@ -2,6 +2,7 @@ function selected(){
    let category ='Architecture'
    let start = 0;
    let count = 0;
+   const btnStorage = JSON.parse(localStorage.getItem('btns') ?? '[]')
    if (localStorage.number) {
       count = parseInt(localStorage.number)
       document.querySelector('.header__bagItems_count').style.display='block'
@@ -24,7 +25,7 @@ function selected(){
                     `<div class="main__shelf_book_info_rating">${item.volumeInfo?.averageRating ?? ''}</div>\n` +
                     `<p class="main__shelf_book_info_text">${item.volumeInfo?.description ?? ' No description'}</p>\n` +
                     `<span class="main__shelf_book_info_price">${item.saleInfo.listPrice?.amount  ?? ''   } ${item.saleInfo.listPrice?.currencyCode  ?? ''   }</span>\n` +
-                    `<button class="main__shelf_book_button">Buy now</button></div>\n` +
+                    `<button class="main__shelf_book_button ${item.id} ${btnStorage.includes(item.id) ? 'main__shelf_book_button_active' : ''}">${btnStorage.includes(item.id) ? 'In the cart' : 'Buy now'}</button></div>\n` +
                     `</div>`
 
              })
@@ -43,16 +44,46 @@ function selected(){
 
    document.addEventListener('click', function () {
       if (event.target.classList.contains('main__shelf_book_button')) {
-         event.target.classList.add('main__shelf_book_button_active')
-         event.target.innerText = 'In the cart';
-         document.querySelector('.header__bagItems_count').style.display='block'
-         count = count + 1;
+
+         const id = event.target.classList[1];
+         if (btnStorage.includes(btnStorage)){
+            btnStorage.splice(btnStorage.indexOf(id),1)
+            event.target.classList.remove('main__shelf_book_button_active')
+            event.target.innerText = 'Buy now';
+            document.querySelector('.header__bagItems_count').style.display='block'
+            count = count - 1;
+            if(count === 0) {
+               document.querySelector('.header__bagItems_count').style.display='none'
+            }
+         }
+         else {
+            btnStorage.push(id)
+            event.target.innerText = 'In the cart';
+            event.target.classList.add('main__shelf_book_button_active')
+            document.querySelector('.header__bagItems_count').style.display='block'
+            count = count + 1;
+         }
+
+         localStorage.setItem('btns',JSON.stringify(btnStorage))
+
          document.querySelector('.header__bagItems_count').innerHTML = count
          localStorage.setItem('number',count)
       }
 
    })
-  
+
+    document.addEventListener('click',   function () {
+       if (event.target.classList.contains('main__shelf_book_button_active')) {
+          event.target.classList.remove('main__shelf_book_button_active')
+          event.target.innerText = 'Buy now';
+          document.querySelector('.header__bagItems_count').style.display='block'
+          count = count - 1;
+          document.querySelector('.header__bagItems_count').innerHTML = count
+          localStorage.setItem('number',count)
+       }
+    })
+
+
    let loadButton = document.querySelector('.main__load');
    document.querySelector('.main__load').addEventListener('click',() =>{
       start = start + 6;
@@ -60,5 +91,6 @@ function selected(){
       document.querySelector('.main__load').style.marginTop
    })
    fetchData()
+
 }
 export {selected}
